@@ -15,11 +15,34 @@ function App() {
       // Fallback data so you can see the UI even if Java isn't running yet
       if(projects.length === 0) {
         setProjects([
-          { id: '001', title: 'Web OS Portfolio', desc: 'Interactive OS-like portfolio environment.' },
-          { id: '002', title: 'Network Scanner', desc: 'Cybersecurity tool for vulnerability assessment.' },
-          { id: '003', title: 'Hardware Integration', desc: 'IoT device security protocols.' },
-          { id: '004', title: 'Student Dashboard', desc: 'Cryptocurrency tracking and analysis dashboard.' },
-          { id: '005', title: 'Crypto Pulse', desc: 'Comprehensive student enrollment dashboard.' }
+          { 
+            id: '001', 
+            title: 'Web OS Portfolio', 
+            desc: 'Interactive OS-like portfolio environment.',
+            link: 'https://portfoli-o-tau.vercel.app/'
+          },
+          { 
+            id: '002', 
+            title: 'Network Scanner', 
+            desc: 'Cybersecurity tool for vulnerability assessment.' 
+          },
+          { 
+            id: '003', 
+            title: 'Hardware Integration', 
+            desc: 'IoT device security protocols.' 
+          },
+          { 
+            id: '004', 
+            title: 'Crypto Pulse', 
+            desc: 'Cryptocurrency tracking and analysis dashboard.',
+            link: 'https://crypto-pulse-ebon.vercel.app/'
+          },
+          { 
+            id: '005', 
+            title: 'Student Dashboard', 
+            desc: 'Comprehensive student management and academic tracking system.',
+            link: 'https://student-dashboard-kappa-lac.vercel.app/'
+          }
         ]);
       }
   }, []);
@@ -71,6 +94,19 @@ function App() {
                   <span className="portal-id">#{proj.id}</span>
                   <h4>{proj.title}</h4>
                   <p>{proj.desc}</p>
+                  
+                  {/* This checks if the project has a link, and if so, renders it */}
+                  {proj.link && (
+                    <a 
+                      href={proj.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="email-link"
+                      style={{ display: 'inline-block', marginTop: '1rem', fontSize: '0.85rem' }}
+                    >
+                      Launch Portal ↗
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
