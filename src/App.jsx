@@ -18,7 +18,8 @@ function App() {
           { id: '001', title: 'Web OS Portfolio', desc: 'Interactive OS-like portfolio environment.' },
           { id: '002', title: 'Network Scanner', desc: 'Cybersecurity tool for vulnerability assessment.' },
           { id: '003', title: 'Hardware Integration', desc: 'IoT device security protocols.' },
-          { id: '004', title: 'Project #4', desc: 'N/A' },
+          { id: '004', title: 'Student Dashboard', desc: 'Cryptocurrency tracking and analysis dashboard.' },
+          { id: '005', title: 'Crypto Pulse', desc: 'Comprehensive student enrollment dashboard.' }
         ]);
       }
   }, []);
